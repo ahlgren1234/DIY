@@ -1,0 +1,7 @@
+/*
+	DIY Theme
+	Custom JavaScript
+	
+*/
+
+

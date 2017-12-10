@@ -1,0 +1,72 @@
+/*
+	Theme Name:   DIY Theme
+	Theme URI:    http://peterahlgren.com
+	Description:  A basic starter theme.
+	Author:       Peter Ahlgren
+	Author URI:   http://peterahlgren.com
+	Version:      1.0
+	Text Domain:  diy-theme
+	Tags:         two-columns, editor-style, custom-menu, featured-images, threaded-comments
+	License:      GNU General Public License v3 or later
+	License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+body {}
+
+.container { 
+	max-width: 960px; 
+	margin: 0 auto; 
+	}
+.box {}
+
+
+.header {}
+.content { 
+	float: left; 
+	width: 65%; 
+	background-color: #efefef; 
+	}
+.sidebar { 
+	float: right; 
+	width: 33%; 
+	background-color: #efefef; 
+	}
+.footer { 
+	clear: both; 
+	padding: 12px 0 0 0; 
+	}
+
+
+h1 {}
+h2 {}
+h3 {}
+
+a {}
+img { max-width: 100%; height: auto; }
+
+
+
+/* defualt wp classes */
+
+.wp-caption {}
+.wp-caption-text {}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+.alignright {}
+.alignleft {}
+.aligncenter {}
+.screen-reader-text
+
+
+
+/* @media */
+
+@media (max-width: 800px) {
+	.content, .sidebar { 
+		float: none; 
+		width: 100%; 
+	}
+}
+
+
