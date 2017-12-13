@@ -5,7 +5,7 @@
 	of the two required files for a theme (the other being style.css).
 	It is used to display a page when nothing more specific matches a query,
 	e.g., it puts together the home page when no home.php file exists.
-	
+
 	@package WordPress
 	@subpackage DIY Theme
 	@since DIY Theme 1.0
@@ -13,37 +13,45 @@
 */ ?>
 <?php get_header(); ?>
 
-<div class="box content">
+<div class="row">
+	<div class="col-md-9">
 
-	<?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post(); ?>
-	
-	<div <?php post_class(); ?>>
-		<h1>
-			<a href="<?php the_permalink(); ?>">
-				<?php the_title(); ?>
-			</a>
-		</h1>
-		<?php the_excerpt(); ?>
-	</div>
-	
-	<?php endwhile; ?>
-	
-	<div class="nav nav-post nav-archive">
-		<div class="prev">
-			<?php next_posts_link(); ?>
+		<?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
+
+		<div <?php post_class(); ?>>
+			<h1>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h1>
+			<?php the_excerpt(); ?>
 		</div>
-		<div class="next">
-			<?php previous_posts_link(); ?>
+
+		<?php endwhile; ?>
+
+		<div class="nav nav-post nav-archive">
+			<div class="prev">
+				<?php next_posts_link(); ?>
+			</div>
+			<div class="next">
+				<?php previous_posts_link(); ?>
+			</div>
 		</div>
-	</div>
-	
-	<?php else : ?>
-	<?php get_template_part('inc/not-found'); ?>
-	
-	<?php endif; ?>
 
-</div>
+		<?php else : ?>
+		<?php get_template_part('inc/not-found'); ?>
 
-<?php get_sidebar(); ?>
+		<?php endif; ?>
+
+	</div> <!-- .col-md-9 -->
+
+	<div class="col-md-3">
+
+		<?php get_sidebar(); ?>
+
+	</div> <!-- .col-md-3 -->
+
+</div> <!-- .row -->
+
 <?php get_footer(); ?>
